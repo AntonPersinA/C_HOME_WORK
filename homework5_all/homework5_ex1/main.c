@@ -5,21 +5,6 @@
 #include "test.h"
 
 
-stack* read_stdin()
-{
-    char *str = calloc(100, sizeof(char));
-    char *read = fgets(str, 99, stdin);
-    int i = 1;
-    stack *res = stack_init(str[0]);
-    while(str[i] != '\0' && i < 100)
-    {
-        res = stack_add(res, str[i]);
-        ++i;
-    }
-    stack_pop(&res);
-    return res;
-}
-
 char expression_equal()
 {
     char *str = calloc(100, sizeof(char));
@@ -143,8 +128,14 @@ char expression_equal()
     return res;
 }
 
+
 int main()
 {
     printf("%d\n", expression_equal());
+
+    test_init();
+    test_add();
+    test_len();
+    test_pop();
     return 0;
 }

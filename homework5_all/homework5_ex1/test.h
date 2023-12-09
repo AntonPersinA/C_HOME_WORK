@@ -11,4 +11,6 @@ int test_add();
 
 int test_pop();
 
+int test_len();
+
 #endif //UNTITLED1_TEST_H
