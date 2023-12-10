@@ -18,3 +18,5 @@ void stack_print(stack* stack_ptr);
 void stack_free(stack* stack_ptr);
 
 char stack_pop(stack** stack_ptr);
+
+int stack_len(stack* stack_ptr);

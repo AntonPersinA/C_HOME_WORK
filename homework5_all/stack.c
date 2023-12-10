@@ -23,10 +23,10 @@ stack* stack_add(stack* stack_ptr, char element)
 
 void stack_print(stack* stack_ptr) {
     if (stack_ptr->next == NULL) {
-        printf("print = %d\n", stack_ptr->value);
+//        printf("print = %d\n", stack_ptr->value);
         return;
     }
-    printf("print = %d\n", stack_ptr->value);
+    printf("print = %c\n", stack_ptr->value + '0');
     stack_print(stack_ptr->next);
 }
 
@@ -56,4 +56,14 @@ char stack_pop(stack** stack_ptr)
     char res = ptr->value;
     free(ptr);
     return res;
+}
+
+
+int stack_len(stack* stack_ptr)
+{
+    if (stack_ptr->next == NULL)
+    {
+        return 1;
+    }
+    return 1 + stack_len(stack_ptr->next);
 }
