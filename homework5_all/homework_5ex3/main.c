@@ -108,7 +108,7 @@ stack* transform()
 }
 
 
-int main()
+int main(int x, char **y)
 {
     stack *fr = transform();
     stack_free(fr);
