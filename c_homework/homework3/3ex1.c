@@ -7,7 +7,7 @@
 void print_array(int *mas, int length)
 {
     printf("{");
-    for (int i = 0; i<length; i++)
+    for (int i = 0; i < length; i++)
     {
         printf("%d, ", mas[i]);
     }
@@ -15,7 +15,7 @@ void print_array(int *mas, int length)
 }
 
 
-void fill_mas_rand(int*mas, int len, int limit)
+void fill_mas_rand(int *mas, int len, int limit)
 {
     srand(clock());
     if (limit)
@@ -25,8 +25,8 @@ void fill_mas_rand(int*mas, int len, int limit)
         {
             *(mas + i) = rand() % (limit);
         }
-    }
-    else{
+    } else
+    {
         limit++;
         for (int i = 0; i < len; i++)
         {
@@ -38,7 +38,7 @@ void fill_mas_rand(int*mas, int len, int limit)
 
 void swap_value_or(int *number1, int *number2)
 {
-    if (number1!=number2)
+    if (number1 != number2)
     {
         *number1 ^= *number2;
         *number2 ^= *number1;
@@ -51,11 +51,11 @@ void insertion_sort(int *mas, int len_mas)
 {
     for (int i = 1; i < len_mas; ++i)
     {
-        for (int j = i; j>0;--j)
+        for (int j = i; j > 0; --j)
         {
             if (*(mas + j) < *(mas + j - 1))
             {
-                swap_value_or(mas+j, mas + j - 1);
+                swap_value_or(mas + j, mas + j - 1);
             }
         }
     }
@@ -64,22 +64,22 @@ void insertion_sort(int *mas, int len_mas)
 
 void q_sort(int *mas, int len)
 {
-    if (len>9) //Оптимальное значение тут 3
+    if (len > 9) //Оптимальное значение тут 3
     {
         int *main_i, *start = mas, *end = mas + len - 1;
-        if (*mas >= *(mas + len - 1) && *mas <= *(mas + len/2) || *mas <= *(mas + len - 1) && *mas >= *(mas + len/2) )
+        if (*mas >= *(mas + len - 1) && *mas <= *(mas + len / 2) ||
+            *mas <= *(mas + len - 1) && *mas >= *(mas + len / 2))
         {
             main_i = mas;
-        }
-        else if (*(mas + len - 1) >= *mas && *(mas + len - 1) <= *(mas + len/2) || *(mas + len - 1) <= *mas && *(mas + len - 1) >= *(mas + len/2))
+        } else if (*(mas + len - 1) >= *mas && *(mas + len - 1) <= *(mas + len / 2) ||
+                   *(mas + len - 1) <= *mas && *(mas + len - 1) >= *(mas + len / 2))
         {
-            main_i = (mas + len -1);
-        }
-        else
+            main_i = (mas + len - 1);
+        } else
         {
-            main_i = (mas + len/2);
+            main_i = (mas + len / 2);
         }
-        while(1)
+        while (1)
         {
             while (*(start) <= *(main_i) && start <= mas + len - 1)
             {
@@ -97,15 +97,14 @@ void q_sort(int *mas, int len)
             if (start < end)
             {
                 swap_value_or(start, end);
-                if(main_i == end){
+                if (main_i == end)
+                {
                     main_i = start;
-                }
-                else if (main_i == start)
+                } else if (main_i == start)
                 {
                     main_i = end;
                 }
-            }
-            else
+            } else
             {
                 swap_value_or(end, main_i);
                 main_i = end;
@@ -114,21 +113,28 @@ void q_sort(int *mas, int len)
         }
         int *main_help = main_i;
         int len_im = 0;
-        for(; main_i > mas;main_i--, len_im++){ }
+        while (main_i > mas)
+        {
+            main_i--;
+            len_im++;
+        }
         q_sort(main_help + 1, len - len_im - 1);
         q_sort(mas, len_im);
-    }
-    else
+    } else
     {
-        insertion_sort(mas,len);
+        insertion_sort(mas, len);
     }
 }
 
 
 int compare_array(int *mas1, int *mas2, int len)
 {
-    for (int i = 0; i < len; ++i){
-        if (*(mas1 + i) != *(mas2 + i))return 0;
+    for (int i = 0; i < len; ++i)
+    {
+        if (*(mas1 + i) != *(mas2 + i))
+        {
+            return 0;
+        }
     }
     return 1;
 }
