@@ -129,7 +129,7 @@ int test_ll_pow_n()
     {
         int m = 2, n = 2;
 
-        if(ll_pow_n(m,n) != 4)
+        if (ll_pow_n(m, n) != 4)
         {
             printf("test_ll_pow_n error\n");
             return 0;
@@ -139,7 +139,7 @@ int test_ll_pow_n()
     {
         int m = 2, n = 3;
 
-        if(ll_pow_n(m,n) != 8)
+        if (ll_pow_n(m, n) != 8)
         {
             printf("test_ll_pow_n error\n");
             return 0;
@@ -149,7 +149,7 @@ int test_ll_pow_n()
     {
         int m = 0, n = 0;
 
-        if(ll_pow_n(m,n) != 1)
+        if (ll_pow_n(m, n) != 1)
         {
             printf("test_ll_pow_n error\n");
             return 0;
@@ -159,7 +159,7 @@ int test_ll_pow_n()
     {
         int m = -10, n = 0;
 
-        if(ll_pow_n(m,n) != 1)
+        if (ll_pow_n(m, n) != 1)
         {
             printf("test_ll_pow_n error\n");
             return 0;
@@ -169,7 +169,7 @@ int test_ll_pow_n()
     {
         int m = 10, n = 0;
 
-        if(ll_pow_n(m,n) != 1)
+        if (ll_pow_n(m, n) != 1)
         {
             printf("test_ll_pow_n error\n");
             return 0;
@@ -179,7 +179,7 @@ int test_ll_pow_n()
     {
         int m = -3, n = 1;
 
-        if(ll_pow_n(m,n) != -3)
+        if (ll_pow_n(m, n) != -3)
         {
             printf("test_ll_pow_n error\n");
             return 0;
@@ -189,7 +189,7 @@ int test_ll_pow_n()
     {
         int m = -3, n = 2;
 
-        if(ll_pow_n(m,n) != 9)
+        if (ll_pow_n(m, n) != 9)
         {
             printf("test_ll_pow_n error\n");
             return 0;
@@ -205,7 +205,7 @@ int test_ll_pow_logn()
     {
         int m = 2, n = 2;
 
-        if(ll_pow_logn(m,n) != 4)
+        if (ll_pow_logn(m, n) != 4)
         {
             printf("ll_pow_logn error\n");
             return 0;
@@ -215,7 +215,7 @@ int test_ll_pow_logn()
     {
         int m = 2, n = 3;
 
-        if(ll_pow_logn(m,n) != 8)
+        if (ll_pow_logn(m, n) != 8)
         {
             printf("ll_pow_logn error\n");
             return 0;
@@ -225,7 +225,7 @@ int test_ll_pow_logn()
     {
         int m = 0, n = 0;
 
-        if(ll_pow_logn(m,n) != 1)
+        if (ll_pow_logn(m, n) != 1)
         {
             printf("ll_pow_logn error\n");
             return 0;
@@ -235,7 +235,7 @@ int test_ll_pow_logn()
     {
         int m = -10, n = 0;
 
-        if(ll_pow_logn(m,n) != 1)
+        if (ll_pow_logn(m, n) != 1)
         {
             printf("ll_pow_logn error\n");
             return 0;
@@ -245,7 +245,7 @@ int test_ll_pow_logn()
     {
         int m = 10, n = 0;
 
-        if(ll_pow_logn(m,n) != 1)
+        if (ll_pow_logn(m, n) != 1)
         {
             printf("ll_pow_logn error\n");
             return 0;
@@ -255,7 +255,7 @@ int test_ll_pow_logn()
     {
         int m = -3, n = 1;
 
-        if(ll_pow_logn(m,n) != -3)
+        if (ll_pow_logn(m, n) != -3)
         {
             printf("ll_pow_logn error\n");
             return 0;
@@ -265,7 +265,7 @@ int test_ll_pow_logn()
     {
         int m = -3, n = 2;
 
-        if(ll_pow_logn(m,n) != 9)
+        if (ll_pow_logn(m, n) != 9)
         {
             printf("ll_pow_logn error\n");
             return 0;
@@ -275,7 +275,7 @@ int test_ll_pow_logn()
     {
         int m = -3, n = 3;
 
-        if(ll_pow_logn(m,n) != -27)
+        if (ll_pow_logn(m, n) != -27)
         {
             printf("ll_pow_logn error\n");
             return 0;
@@ -285,7 +285,7 @@ int test_ll_pow_logn()
     {
         int m = -3, n = 4;
 
-        if(ll_pow_logn(m,n) != 81)
+        if (ll_pow_logn(m, n) != 81)
         {
             printf("ll_pow_logn error\n");
             return 0;
@@ -296,7 +296,7 @@ int test_ll_pow_logn()
     {
         int m = -3, n = 5;
 
-        if(ll_pow_logn(m,n) != -243)
+        if (ll_pow_logn(m, n) != -243)
         {
             printf("ll_pow_logn error\n");
             return 0;
@@ -310,11 +310,11 @@ int test_ll_pow_logn()
 int test_buble_sort()
 {
     {
-        int mas1[10] = {0, 1,2,3,4,5,6,7,8,9};
+        int mas1[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
         buble_sort(mas1, 10, 0);
 
-        int mas2[10] = {0, 1,2,3,4,5,6,7,8,9};
+        int mas2[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
         if (!compare_array(mas1, mas2, 10))
         {
@@ -324,11 +324,11 @@ int test_buble_sort()
     }
 
     {
-        int mas1[10] = {7,1,0,5,4,2,9,8,3,6};
+        int mas1[10] = {7, 1, 0, 5, 4, 2, 9, 8, 3, 6};
 
         buble_sort(mas1, 10, 0);
 
-        int mas2[10] = {0, 1,2,3,4,5,6,7,8,9};
+        int mas2[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
         if (!compare_array(mas1, mas2, 10))
         {
@@ -359,11 +359,11 @@ int test_buble_sort()
 int test_counting_sort()
 {
     {
-        int mas1[10] = {0, 1,2,3,4,5,6,7,8,9};
+        int mas1[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
         counting_sort(mas1, 10);
 
-        int mas2[10] = {0, 1,2,3,4,5,6,7,8,9};
+        int mas2[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
         if (!compare_array(mas1, mas2, 10))
         {
@@ -373,11 +373,11 @@ int test_counting_sort()
     }
 
     {
-        int mas1[10] = {7,1,0,5,4,2,9,8,3,6};
+        int mas1[10] = {7, 1, 0, 5, 4, 2, 9, 8, 3, 6};
 
         counting_sort(mas1, 10);
 
-        int mas2[10] = {0, 1,2,3,4,5,6,7,8,9};
+        int mas2[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
         if (!compare_array(mas1, mas2, 10))
         {
@@ -405,7 +405,7 @@ int test_counting_sort()
 }
 
 
-int main()
+void test_all()
 {
     test_fibonachi_def();
 
@@ -418,6 +418,12 @@ int main()
     test_buble_sort();
 
     test_counting_sort();
+}
+
+
+int main()
+{
+    test_all();
 
     return 0;
 }
