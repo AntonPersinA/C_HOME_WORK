@@ -1,14 +1,18 @@
 
 int parenthesis_rule1(char *stroka)
 {
-    int skobe = 0, i = 0;
-    while (*(stroka+i) != *"\0") {
-        if (*(stroka+i) == *"(" || *(stroka+i) == *"[" || *(stroka+i) == *"{"){
+    int skobe = 0;
+    int i = 0;
+    while (*(stroka + i) != *"\0")
+    {
+        if (*(stroka + i) == *"(" || *(stroka + i) == *"[" || *(stroka + i) == *"{")
+        {
             skobe++;
         }
-        if (*(stroka+i) == *")" || *(stroka+i) == *"]" || *(stroka+i) == *"}"){
+        if (*(stroka + i) == *")" || *(stroka + i) == *"]" || *(stroka + i) == *"}")
+        {
             skobe--;
-            if (skobe <0)
+            if (skobe < 0)
                 return 0;
         }
         ++i;

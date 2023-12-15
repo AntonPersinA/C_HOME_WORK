@@ -30,7 +30,7 @@ int test_swap_value()
 int test_array_zero()
 {
     {
-        int mas[10] = {0,1,2,3,4,5,6,7,8,9};
+        int mas[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
         if (array_zero(mas, 10) != 1)
         {
@@ -40,7 +40,7 @@ int test_array_zero()
     }
 
     {
-        int mas[5] = {0,0,0,0,-0};
+        int mas[5] = {0, 0, 0, 0, -0};
 
         if (array_zero(mas, 5) != 5)
         {
@@ -50,7 +50,7 @@ int test_array_zero()
     }
 
     {
-        int mas[5] = {1,2,3, - 1, -6};
+        int mas[5] = {1, 2, 3, -1, -6};
 
         if (array_zero(mas, 5) != 0)
         {
@@ -351,8 +351,8 @@ int test_swap_value_or()
 int test_array_reverse()
 {
     {
-        int mas1[3] = {-1,2,3};
-        int mas2[3] = {3,2,-1};
+        int mas1[3] = {-1, 2, 3};
+        int mas2[3] = {3, 2, -1};
 
         array_reverse(mas1, 0, 3);
 
@@ -364,7 +364,7 @@ int test_array_reverse()
     }
 
     {
-        int mas1[3] = {-1,2,3};
+        int mas1[3] = {-1, 2, 3};
         int mas2[3] = {2, -1, 3};
 
         array_reverse(mas1, 0, 2);
@@ -376,7 +376,7 @@ int test_array_reverse()
     }
 
     {
-        int mas1[3] = {-1,2,3};
+        int mas1[3] = {-1, 2, 3};
         int mas2[3] = {2, -1, 3};
 
         array_reverse(mas1, 0, 3);
@@ -390,10 +390,8 @@ int test_array_reverse()
     return 1;
 }
 
-
-int main()
+void test_all()
 {
-
     test_swap_value();
 
     test_array_zero();
@@ -413,6 +411,12 @@ int main()
     test_swap_value_or();
 
     test_array_reverse();
+}
+
+int main()
+{
+
+    test_all();
 
     return 0;
 }
